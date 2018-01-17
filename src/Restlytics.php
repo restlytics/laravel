@@ -65,7 +65,7 @@ class Restlytics
 		Log::info(json_encode($params));
 
 		$client = new Client();
-		$client->postAsync( config('app.url') . "/track", [
+		$client->postAsync("http://api.restlytics.com/track", [
 			'body' => json_encode($params),
 			'auth' => [
                 $apiKey,
